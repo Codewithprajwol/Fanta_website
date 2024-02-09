@@ -18,23 +18,33 @@ html , body{
     height: 100%;
     width: 100%;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 #main{
     width:100%;
 }
 
 #page1{
-   min-height: 100vh;
+   height: 100vh;
     width:100%;
     background: linear-gradient(to right, #ff8c00, #f15a29, #ff4500);
 
 }
 nav{
+    position:fixed;
     padding:1vw 6vw;
     height:13vh;
+    width:100%;
     display:flex;
     justify-content: space-between;
     align-items:center;
+    z-index:9999;
     /* background-color: white; */
+}
+.nav-filler{
+    height:13vh;
+    width:100%;
 }
 .logo a img{
     width:6vw;
@@ -59,9 +69,11 @@ nav .abouts a{
     justify-content: center;
 }
 .hero #fanta {
+    position:absolute;
     width:40%;
     margin-bottom:4vw;
     z-index: 2;
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
 .one-o{
     position:absolute; 
@@ -71,11 +83,14 @@ nav .abouts a{
     left:53%;
     top:65%;
     z-index: 3;
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+
 }
 .hero #orange-cut{
     width:18%;
     left:33%;
     top: 16%;
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
     z-index:1;
 }
 .hero #cocoleaf{
@@ -88,15 +103,136 @@ nav .abouts a{
     left:5%;
     top:15%;
     transform:rotate(45deg);
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+
 }
 .hero #leaf2{
     width:12%;
     right:5%;
     bottom:5%; 
     transform:rotate(90deg);
-
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    
 }
 .hero h1{
     font-size:22vw;
     font-family:yamato;
 }
+/* start of part 2 */
+#page-2{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:100vh;
+    width:100%;
+    background: linear-gradient(to right, #ff8c00, #f15a29, #ff4500);
+
+}
+.lefty{
+    display:flex;
+    align-items:flex-end;
+    justify-content:flex-start;
+    width:50%;
+    height:inherit;
+    /* background-color: red; */
+}
+.righty{
+    display:flex;
+    align-items:center;
+    flex-direction:column;  
+    justify-content:center;
+    gap:2vw;
+    width:50%;
+    height:inherit;
+    /* background-color: pink; */
+}
+.lefty svg{
+    margin-top:5vw;
+    width:65%;
+}
+.righty p{
+    padding:0vw 3vw;
+    text-align: left;
+    font-size:1.5vw;
+}
+.righty h1{
+    font-family:yamato;
+    font-size:4vw;
+    margin-right:20vw;
+}
+/* start of page 3 */
+#page-3{
+    display:flex;
+    padding:5vw 5vw 0vw 5vw;
+    align-items: center;
+    justify-content: space-around;
+    gap:2vw;
+   height: 130vh;
+    width: 100%;
+    background:linear-gradient(to right, #ff8c00, #f15a29, #ff4500);
+    overflow:hidden;
+}
+#page-3 .cold-drinks{
+    display:flex;
+    align-items:flex-end;
+    justify-content: center;
+    position:relative; 
+    /* overflow:hidden;    */
+    border-radius:20px;
+    width:calc(100% / 3);
+    height:100vh;
+    background-color: #D6E4E5;
+}
+#cocola {
+    width:70%;
+    position:absolute;
+    top:-5%;
+    left:20%;
+    z-index:2;
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+#lemon-1{
+    width: 70%;
+    position:absolute;
+    top:-20%;
+    left:0%;
+    z-index: 1;
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+#pepsi{
+    width:100%;
+    position:absolute;
+    top:-7%;
+    left:0%;
+    z-index:2; 
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+#lemon-2{
+    width: 70%;
+    position:absolute;
+    top:-20%;
+    left:0%;
+    z-index: 1;
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+ .info{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom:2vw;
+    gap:0.5vw;
+ }
+ .info h1{
+    font-family: yamato;
+    font-size:3vw;
+    color:black;
+ }
+ .info button{
+    text-align: center;
+    padding:.5vw 1.5vw;
+    border:none;
+    background-color: #ff4500;
+    border-radius:50px;
+    font-size:1.3vw;
+ }
